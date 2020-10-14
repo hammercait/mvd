@@ -178,6 +178,10 @@ body {
         letter-spacing: 2rem;
         animation: title 5s 4s ease-in forwards;
         text-shadow: 0 1rem 1rem var(--very-dark-blue, .1);
+
+        @media only screen and (max-width: $bp-xxs) {
+            letter-spacing: 1rem;
+        }
     }
 }
 
@@ -898,11 +902,40 @@ body {
             transform: scale(1.5);
             border:2rem solid rgba(18, 27, 36, 0.8);
         }
+
+        @media only screen and (max-width: $bp-xxs) {
+            &:hover {
+                transform: scale(3);
+                border:none;
+            }
+        }
     }
 }
 
 .section-6 {
     height: auto;
     background-image: linear-gradient(rgba(18, 27, 36, .5), rgba(18, 27, 36, .8)), url(images/conor-sexton-hRemch0ZDwI-unsplash.jpg);
+    padding-bottom: 5rem;
+}
+
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    &__logo {
+        width: 25rem;
+        height: auto;
+        border-bottom: 1px solid var(--dark-red);
+        border-top: 1px solid var(--dark-red);
+        padding: 1rem 0;
+    }
+
+    p {
+        color: var(--light-grey-blue-2);
+        padding-top: 3rem;
+    }
 }
 
